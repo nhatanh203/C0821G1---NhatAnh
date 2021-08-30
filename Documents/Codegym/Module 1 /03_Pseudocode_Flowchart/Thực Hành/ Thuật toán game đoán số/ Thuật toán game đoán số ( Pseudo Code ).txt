@@ -1,0 +1,8 @@
+Begin 
+       Input N random 0-9
+       Input M
+       IF (N==M)
+           Display "Du doan dung"
+       ELSE
+           Display "Du doan sai"
+End
