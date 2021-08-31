@@ -1,10 +1,13 @@
 BEGIN
-          INPUT a1,a2,a3,a4,..ai..an ( i < n )
-          a1 = max ; i = 2
+          INPUT a1,a2,a3,a4,..ai
+          max = a1 ; i = 2
           IF i > n 
-                     DISPLAY "a1 max"
-          ELSE IF ai > max 
-                     DISPLAY "ai max"
-          END IF
+                     DISPLAY "max"
+          ELSE 
+             WHILE ai > max 
+                     DISPLAY "max"
+                     i=i+1
+          END DO
+     END IF
 END 
           
