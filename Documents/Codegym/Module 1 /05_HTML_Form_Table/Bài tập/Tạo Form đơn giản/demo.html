@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .header {
+            background-color: orangered;
+            height: 60px;
+            font-size: 50px;
+            text-align: center;
+      }
+        .bodyer { font-size: 20px;
+            float : left;
+            height: 10px;
+            width: 100px;
+        }
+        p.bass { font-size: 30;
+            float : left;
+            height: 1px;
+            width: 100px;
+        }
+       .bass2 {
+           float: left;
+           height: 10px;
+           width: 180px;
+       }
+    </style>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+</head>
+<body> <form name="formLogin" action="https://www.google.com/" method="GET">
+       <div class="header" >SỞ THÍCH CỦA BẠN</div>
+       <div class="bodyer"> Họ và tên <span style="color: red">*</span> </div>
+       <input type = "text" name="firstname" size="25"/>
+       <br>
+       <p class="bass"> Email </p>
+       <br>
+       <input class="bass2" type = "text" name="email" size="25"/>
+       <br>
+       <br>
+       <table >
+           <tr>
+               <th rowspan="3">Sở thích</th>
+                    <td> <label><input name="hobby" value="travel" type="checkbox"/> Du lịch</label>
+               <td>
+                   <label><input name="hobby" value="sport" type="checkbox"/> Thể thao</label>
+               </td>
+               <td>
+                   <label><input name="hobby" value="cooking" type="checkbox"/> Chơi game</label>
+               </td>
+           </tr>
+           <tr>
+               <td> <label><input name="hobby" value="web" type="checkbox"/> Lướt web</label> </td>
+
+               <td><label><input name="hobby" value="readbook" type="checkbox"/> Đọc sách</label> </td>
+
+               <td><label><input name="hobby" value="Music" type="checkbox"/> Âm nhạc</label></td>
+           </tr>
+           <tr>
+               <td><label><input name="hobby" value="Movie" type="checkbox"/> Điện ảnh</label></td>
+           </tr>
+       </table>
+       <table>
+           <tr>
+
+               <td><button name="button" type="button"> Gửi thông tin</button></td>
+               <td>
+                   <button type="reset">Nhập lại</button>
+               </td>
+           </tr>
+       </table>
+</form>
+</body>
+</html>
