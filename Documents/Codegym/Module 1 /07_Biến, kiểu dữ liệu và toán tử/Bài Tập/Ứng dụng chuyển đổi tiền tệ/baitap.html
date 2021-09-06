@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<p><strong>Amount</strong></p>
+<input type="text" id="amount">
+<p><strong>From Currency</strong></p>
+<select id="pay">
+    <option value="VND"> VND </option>
+    <option value="USD"> USD </option>
+</select>
+<p><strong>To Currency</strong></p>
+<select id="money">
+   <option value="USD">USD</option>
+   <option value="VND">VND</option>
+</select>
+<h1 style="color : blue" id="ketqua"></h1>
+<button onclick="convert()">Chuyển đổi</button>
+<script>
+    function convert() {
+        let amount = document.getElementById('amount').value;
+        let pay = document.getElementById('pay').value;
+        let money = document.getElementById('money').value;
+        if ( pay === "VND" && money === "USD" ){
+            result = amount / 23000;
+        } else if ( pay === "USD" && money === "VND"){
+            result = amount * 23000;
+        } else {
+            result = amount;
+        }
+        document.getElementById('ketqua').innerText =  result;
+    }
+</script>
+
+
+
+</body>
+</html>
