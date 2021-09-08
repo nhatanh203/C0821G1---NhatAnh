@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img src="blue1.jpeg" onclick="changeImg(1)" id="blueA" width="200" height="564" alt="img1">
+<img src="yellow2.jpeg" onclick="changeImg(2)" id="blueB" width="200" height="564" alt="img2">
+<img src="red3.jpeg" onclick="changeImg(3)" id="blueC" width="200" height="564" alt="img3">
+<img src="blue4.jpeg" onclick="changeImg(4)" id="blueD" width="200" height="564" alt="img4">
+<img src="red2.jpeg" onclick="changeImg(5)" id="blueE" width="200" height="564" alt="img5">
+
+<script>
+    function changeImg(color) {
+        let img1 = document.getElementById('blueA').getAttribute('src');
+        let img2 = document.getElementById('blueB').getAttribute('src');
+        let img3 = document.getElementById('blueC').getAttribute('src');
+        let img4 = document.getElementById('blueD').getAttribute('src');
+        let img5 = document.getElementById('blueE').getAttribute('src');
+
+        switch (color) {
+            case 1: {
+                if (img1 === "blue1.jpeg") {
+                    document.getElementById('blueA').src = "red1.jpeg"
+                } else if (img1 === "red1.jpeg") {
+                    document.getElementById('blueA').src = "yellow1.jpeg";
+                } else {
+                    document.getElementById('blueA').src = "blue1.jpeg";
+                }
+                break;
+            }
+            case 2: {
+                if (img2 === "blue2.jpeg") {
+                    document.getElementById('blueB').src = "red2.jpeg";
+                } else if (img2 === "red2.jpeg") {
+                    document.getElementById('blueB').src = "yellow2.jpeg";
+                } else {
+                    document.getElementById('blueB').src = "blue2.jpeg";
+                }
+                break;
+            }
+            case 3: {
+                if (img3 === "blue3.jpeg") {
+                    document.getElementById('blueC').src = "red3.jpeg";
+                } else if (img3 === "red3.jpeg") {
+                    document.getElementById('blueC').src = "yellow3.jpeg";
+                } else {
+                    document.getElementById('blueC').src = "blue3.jpeg";
+                }
+                break;
+            }
+            case 4: {
+                if (img4 === "blue4.jpeg") {
+                    document.getElementById('blueD').src = "red4.jpeg";
+                } else if (img4 === "red4.jpeg") {
+                    document.getElementById('blueD').src = "yellow4.jpeg";
+                } else {
+                    document.getElementById('blueD').src = "blue4.jpeg";
+                }
+                break;
+            }
+            case 5: {
+                if (img5 === "blue5.jpeg") {
+                    document.getElementById('blueE').src = "red5.jpeg";
+                } else if (img5 === "red5.jpeg") {
+                    document.getElementById('blueE').src = "yellow5.jpeg";
+                } else {
+                    document.getElementById('blueE').src = "blue5.jpeg";
+                }
+                break;
+
+                if (document.getElementById('blueA').getAttribute('src') === "blue1.jpeg"
+                    && document.getElementById('blueB').getAttribute('src') === "blue2.jpeg"
+                    && document.getElementById('blueC').getAttribute('src') === "blue3.jpeg"
+                    && document.getElementById('blueD').getAttribute('src') === "blue4.jpeg"
+                    && document.getElementById('blueE').getAttribute('src') === "blue5.jpeg")
+                {alert("COMPLETE")
+                } else if (document.getElementById('blueA').getAttribute('src') === "red1.jpeg"
+                && document.getElementById('blueB').getAttribute('src') === "red2.jpeg"
+                && document.getElementById('blueC').getAttribute('src') === "red3.jpeg"
+                && document.getElementById('blueD').getAttribute('src') === "red4.jpeg"
+                && document.getElementById('blueE').getAttribute('src') === "red5.jpeg")
+                {alert("COMPLETE")
+
+                }else (document.getElementById('blueA').getAttribute('src') === "yellow1.jpeg"
+                    && document.getElementById('blueB').getAttribute('src') === "yellow2.jpeg"
+                    && document.getElementById('blueC').getAttribute('src') === "yellow3.jpeg"
+                    && document.getElementById('blueD').getAttribute('src') === "yellow4.jpeg"
+                    && document.getElementById('blueE').getAttribute('src') === "yellow5jpeg")
+                {alert("COMPLETE")
+            }
+
+</script>
+
+</body>
+</html>

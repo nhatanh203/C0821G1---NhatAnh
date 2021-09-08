@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let x = parseInt(prompt('Nhập x :'))
+    let y = parseInt(prompt('Nhập y :'))
+    let z = parseInt(prompt('Nhập z :'))
+    let delta = y*y - 4*x*z
+
+    if (delta < 0) {
+        document.write('Phương trình vô nghiệm')
+    } else if ( delta === 0) {
+        a = -y/2*x ; document.write('Phương trình có nghiệm = ' + a) }
+    // Math.sqrt(double num)
+    // // Trong đó:
+    // //     num - số cần tính căn bậc hai.
+    // //     Phương thức trả về:
+    // // Căn bậc hai của số được chỉ định.
+    // //     NaN nếu đối số nhỏ hơn 0 hoặc NaN.
+    // // *Lưu ý: Phương thức luôn trả về số dương và số được làm tròn chính xác.
+    else {
+        x1 = (-y + Math.sqrt(delta))/(2*x);
+ document.write('Phương trình có nghiệm x1 = ' + x1)
+        x2 = (-y - Math.sqrt(delta))/(2*x);
+        document.write('Phương trình có nghiệm x2 = ' + x2)
+
+    }
+</script>
+
+</body>
+</html>

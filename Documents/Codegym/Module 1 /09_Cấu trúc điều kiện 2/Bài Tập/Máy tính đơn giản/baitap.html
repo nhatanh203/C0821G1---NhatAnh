@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    button {
+        padding: 10px;
+        width: 67px;
+        height: 45px;
+        background-color:#dddddd;
+        color:blue ;
+        font-size: 20px;}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title> Ứng Dụng Máy Tính</title>
+</head>
+<body>
+
+<div class="maytinh"></div>
+<p id="zero">0</p>
+<div class="hang2">
+    <button id="nut7" value="7" onclick="so('7')" >7</button>
+    <button id="nut8"  value="8" onclick="so('8')" >8</button>
+    <button id="nut9"  value="9" onclick="so('79')" >9</button>
+    <button id="+" value="cong" onclick="so('+')" >+</button>
+</div>
+<div class="hang3">
+    <button id="nut4" value="4" onclick="so('4')" >4</button>
+    <button id="nut5" value="5" onclick="so('5')" >5</button>
+    <button id="nut6" value="6" onclick="so('6')" >6</button>
+    <button id="-" value="tru" onclick="so('-')" >-</button>
+</div>
+<div class="hang4">
+    <button id="nut1" value="1" onclick="so('1')" >1</button>
+    <button id="nut2" value="2" onclick="so('2')" >2</button>
+    <button id="nut3" value="3" onclick="so('3')" >3</button>
+    <button id="*" value="nhan" onclick="so('*')" >*</button>
+</div>
+<div class="hang5">
+    <button id="xoa" onclick="reset()">C</button>
+    <button id="nut0" value="0" onclick="so('0')" >0</button>
+    <button id="bang" value="bang" onclick="so('=')" >=</button>
+    <button id="chia" value="chia" onclick="so('/')" >/</button>
+</div>
+</body>
+<script>
+    let number = '' ;
+    function reset() {
+        document.getElementById("zero").innerHTML = "0";
+    }
+    function so(operator) {
+        if (operator === '=') {
+            document.getElementById('zero').innerText = eval(number);
+        } else {
+            number += operator;
+            document.getElementById('zero').innerText = number;
+        }
+    }
+
+
+
+</script>
+</html>
