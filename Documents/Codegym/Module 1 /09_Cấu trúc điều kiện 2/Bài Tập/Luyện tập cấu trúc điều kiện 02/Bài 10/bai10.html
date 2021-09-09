@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<!--Định mức sử dụng điện cho mỗi hộ là: 50 KW với giá 230đ/KW-->
+<!--Nếu phần vượt định mức <= 50KW thì tính giá 480đ/KW-->
+<!--Nếu phần vượt định mức <= 100KW thì tính giá 900đ/KW-->
+<body>
+<script>
+    let kwdien = parseInt(prompt('Nhập số KW đã sử dụng : '))
+    let giatien = kwdien * 230
+    let giatien1 = kwdien * 480
+    let giatien2 = kwdien * 900
+
+    if ( kwdien <= 50) {
+        alert ('Gía tiền điện phải trả tháng này là = ' + giatien )
+    } else if (kwdien <100) {
+        alert ('Giá tiền điện phải trả tháng này là =' + giatien1)
+    } else {
+        alert ('Giá tiền điện phải trả tháng này là =' + giatien2)
+    }
+</script>
+
+</body>
+</html>

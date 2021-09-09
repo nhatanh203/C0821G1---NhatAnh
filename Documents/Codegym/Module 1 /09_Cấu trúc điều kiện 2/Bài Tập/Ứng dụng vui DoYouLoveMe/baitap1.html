@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me?</title>
+</head>
+<body>
+     <h1 style="color: brown">Do you love me?</h1>
+          <input type="button" onclick="yesClick()" value="Có" style="position: absolute; left: 45px">
+<!--     absolute: Dùng để thiết lập vị trí của một phần tử nhưng
+                  nó sẽ luôn nằm trong một phần tử mẹ đang là relative.-->
+          <input type="button" id="ranDom" value="Không" onmouseover="noClick()" style="position: absolute; left: 100px">
+<script>
+    function noClick() {
+        var yes =Math.round(Math.random()*window.innerWidth);
+        // Phương thức Math round trong JavaScript
+        //    (làm tròn số) trả về giá trị của một số integer gần nhất.
+        var no =Math.round(Math.random()*window.innerHeight);
+
+        document.getElementById('ranDom').style.left=yes+'px';
+
+        document.getElementById('ranDom').style.top=no+'px';
+    }
+    function yesClick() {
+        alert('Just Kidding !');
+
+    }
+</script>
+</body>
+</html>
