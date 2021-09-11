@@ -15,9 +15,13 @@
     table.appendChild(tableBody);
 
     for (var i = 2; i <= 9; i++) {
+       // var element = document.createElement(tagName);
+       //  Là thẻ HTML mà bạn muốn tạo mới. Không sử dụng tên đủ điều kiện (như “html: a“) với phương thức này.
+       //      Khi được gọi, createElement() chuyển đổi tagName thành chữ thường trước khi tạo phần tử^D
       var tr = document.createElement('TR');
       tableBody.appendChild(tr);
-
+      // //nodeObject.appendChild(newchild)
+      //   newchild	Một nút con sẽ được thêm (gắn vào) nodeObject
       for (var j = 2; j <= 9; j++) {
         var td = document.createElement('TD');
         td.width = '75';
