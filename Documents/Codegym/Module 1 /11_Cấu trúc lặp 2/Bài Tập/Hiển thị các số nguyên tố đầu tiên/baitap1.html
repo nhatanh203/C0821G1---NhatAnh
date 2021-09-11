@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test số nguyên tố</title>
+</head>
+<body>
+<script>
+  let number = parseInt(prompt("Nhập số kiểm tra: "));
+  let test = true;
+  if (number < 2){
+    alert("Không phải số nguyên tố");
+  } else {
+    for (let i = 2; i < number; i++ ){
+      if (number % i === 0) {
+        test = false;
+        continue;
+      }
+    }
+  }
+  if (test === true){
+    document.write("Là số nguyên tố")
+  } else {
+    document.write("Không phải số nguyên tố");
+  }
+</script>
+
+</body>
+</html>
