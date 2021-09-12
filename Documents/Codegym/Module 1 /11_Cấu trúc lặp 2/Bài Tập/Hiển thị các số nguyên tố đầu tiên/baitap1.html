@@ -7,23 +7,21 @@
 <body>
 <script>
   let number = parseInt(prompt("Nhập số kiểm tra: "));
-  let test = true;
-  if (number < 2){
-    alert("Không phải số nguyên tố");
-  } else {
-    for (let i = 2; i < number; i++ ){
-      if (number % i === 0) {
-        test = false;
-        continue;
+  let count = 0;
+    for (let x = 2; count < number; x++) {
+      let test = true;
+      for (let i = 2; i < x; i++) {
+        if (x % i === 0) {
+          test = false;
+          break;
+        }
+      }
+    if (test === true) {
+      count += 1;
+      document.write(x);
+      document.write('<br>');
       }
     }
-  }
-  if (test === true){
-    document.write("Là số nguyên tố")
-  } else {
-    document.write("Không phải số nguyên tố");
-  }
 </script>
-
 </body>
 </html>
