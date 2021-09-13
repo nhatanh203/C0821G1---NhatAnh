@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Tạo và thao tác với mảng</title>
+</head>
+<h2><strong>Simple Screen :</strong></h2>
+<body>
+<input type="text" id="txt"/>
+<input type="button"  value="Add" onclick="add_element();"/>
+<input type="button" value="Display" onclick="display();"/>
+<div id="result"></div>
+</body>
+<script>
+  let x = 0;
+  let array = Array();
+  function add_element() {
+    array[x] = document.getElementById("txt").value;
+    alert("Element=" + array[x] + "Added at index" + x);
+    x++;
+    document.getElementById("txt ").value = "";
+  }
+  function display() {
+    let e = "<hr/>";
+    for (let i = 0; i < array.length; i++) {
+      e += "Element " + i + " = " + array[i] + "<br/>";
+    }
+    document.getElementById("result").innerHTML = e;
+  }
+</script>
+</html>
