@@ -9,11 +9,11 @@
     function start(){
        let i;
         let a = Math.floor(Math.random() * 20);
-     for ( i =1;i<9;i++) {
+     for ( i =0;i<3;i++) {
          parseInt(prompt('Nhập số chọn ngẫu nhiên từ 0-9 : '));
          if (i === a) {
              alert('Chúc mừng bạn')
-
+             break;
          } else {
              alert('Bạn đã chọn sai')
          }

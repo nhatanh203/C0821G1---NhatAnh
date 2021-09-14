@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bàn cờ Caro</title>
+</head>
+<h1><strong>CARO GAME SIPMLE</strong></h1>
+<body>
+<hr/>
+<p id="carogame"></p>
+<script>
+    let x = document.getElementById('carogame');
+    let board = [];
+    let data = "";
+    for (let i = 0;i < 5;i++) board[i] = [0, 0, 0, 0];for (let i = 0; i < 5; i++) {
+        board[i] = new Array(0, 0, 0, 0, 0);
+    }
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let b = 0; b < 5; b++) {
+            data += board[i][b] + "&nbsp;&nbsp;";
+        }
+    }
+    data += "<br/><input type='button' value='Change' onclick='changeValue()'>"
+    x.innerHTML=data;
+
+    function changeValue() {
+        let ptionA = prompt("Enter A :")
+        let ptionB = prompt("Enter B :")
+        data = "" ;
+        board[ptionA][ptionB] = "x";
+        for (let i = 0; i < 5; i++){
+            data +="<br/>"
+            for ( let b = 0; b < 5; b++){
+                data += board[i][b] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+
+        } data += "<br/><input type='button' value='Change' onclick='changeValue()'>"
+        x.innerHTML=data;
+    }
+</script>
+</body>
+</html>
