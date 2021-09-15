@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = prompt('Nhập vào mảng kí tự : ')
+    let array = []
+    for (let i = 0 ; i < x.length; i ++){
+        array[i]=x[i];
+    }
+    //dùng hàm array splice để xóa phần tử.
+    // Hoặc dùng để bổ sung phần tử vào một vị trí nào đó trong mảng.
+    for ( let y = 0 ; y < array.length ; y ++) {
+        if (array[y] === '-') {
+            array.splice(y, 1, "_")
+        }
+    }
+    // array.join dùng để nối các phần tử của mảng lại với nhau thành một chuỗi.
+    alert(array.join(""))
+</script>
+</body>
+</html>

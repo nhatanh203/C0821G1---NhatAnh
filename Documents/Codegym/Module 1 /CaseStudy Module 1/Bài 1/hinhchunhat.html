@@ -5,18 +5,20 @@
     <title>Vẽ Hình</title>
 </head>
 <body>
-<script type="text/javascript">
-    for( i=1;i<=4;i++) {
-        //tao hang (row) *
-
-        for(j=1;j<=5;j++) {
-            document.writeln(" * ")
+<script>
+     for (let i = 1; i <= 4; i++) {
+     for (let j = 1; j <= 5; j++) {
+        if (i === 1 || i === 4) {
+            document.write("*");
+           } else {
+            if (j === 1 || j === 5) {
+             document.write("*");
+           } else {
+             document.write("&nbsp&nbsp");
+         }
         }
-
-        //xuong dong khi hien thi ket qua cua tung hang
-        document.writeln("<br/>")
-    }
+          }document.write("<br>");
+     }
 </script>
-
 </body>
 </html>

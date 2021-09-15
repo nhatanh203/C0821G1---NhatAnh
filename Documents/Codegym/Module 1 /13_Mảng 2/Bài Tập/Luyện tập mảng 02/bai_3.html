@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Đếm kí tự trong mảng</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
 <script>
-    let x =  [ 'c', 'b', 'c', '@', '*', '#' ]
-    document.write('số kí tự trong mảng là :' +  x.length)
+  let size;
+  let arr = [];
+  let count = 0;
+  do {size = parseInt(prompt("Nhập kích thước của mảng: "));
+  } while (size > 10 || isNaN(size));
+  for (let i = 0; i< size; i++){
+      arr[i] = prompt("Nhập phần tử thứ: " + i);
+      if ( isNaN(arr[i]) === false){
+          count++;
+      }
+  }
+  document.write("Mảng kí tự : " + arr);
+  document.write("<br>");
+  document.write("Số kí tự trong mảng : " + count);
 </script>
 </body>
 </html>

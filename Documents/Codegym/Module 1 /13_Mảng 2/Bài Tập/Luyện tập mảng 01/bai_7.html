@@ -10,15 +10,18 @@
     for (let i = 0; i<10;i++){
         let phanTu = parseInt(prompt('Nhập số nguyên trong mảng :' + (i+1) ))
         index[i]= phanTu;
-    } let songuyen = parseInt(prompt('Nhập V : '))
-    for (let i = 0 ; i < 10; i++){
-        if (songuyen === index[i]){
-            check = true ;
-            break; }}
-    if (check===true){
-        let array = index[9] = 0;
-        alert(index)
-    }
+    } let num = parseInt(prompt('Nhập V : '))
+    for (let i = 0; i < index.length; i++){
+        if (num === index[i]) {
+            for (let j = i; j < index.length; j++) {
+                index[j] = index[j + 1]
+            } check = true
+            if (check === true) {
+                let array = index[9] = 0;
+                alert(index)
+            }
+        }
+        }
 </script>
 </body>
 </html>

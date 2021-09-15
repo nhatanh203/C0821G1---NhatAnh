@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<input type="text" id="search"/>
+<input type="button" value="Search" onclick="find()"/>
+<p id="result">Kết quả : </p>
+<script>
+    let tiengViet = ['một','hai','ba','bốn','năm','sáu','bảy'];
+    let tiengAnh = ['one','two','three','four','five','six','seven']
+ function find() {
+        let eLish = document.getElementById("search").value;
+         let index='a';
+        for (let i = 0; i < tiengAnh.length; i ++){
+            if (tiengAnh[i]===eLish){
+                index=i;
+            }
+        }if (index === 'a' ){
+         document.getElementById("result").innerText='Không tìm thấy kết quả'
+     }else {
+         document.getElementById("result").innerText = 'Kết quả :' + tiengViet[index];
+     }
+ }
+</script>
+</body>
+</html>
