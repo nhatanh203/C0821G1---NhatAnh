@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1><strong>Temperature Converter</strong></h1>
+<h3>Nhập vào giá trị của độ F để chuyển sang độ C :</h3>
+<form>
+  <p>
+    <label>Độ F : </label>
+    <input id="inputF" type="number" placeholder="Fahrenheit"
+           oninput="temperatureConverter(this.value)"
+           onchange="temperatureConverter(this.value)">
+  </p>
+  <p>Độ C: <span id="outputC"></span></p>
+</form>
+<script>
+  function temperatureConverter(Num) {
+    Num = parseFloat(Num);
+    document.getElementById("outputC").innerHTML = (Num-32) / 1.8;
+  }
+</script>
+</body>
+</html>

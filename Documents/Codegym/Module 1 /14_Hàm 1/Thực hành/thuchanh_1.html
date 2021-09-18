@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và gọi hàm</title>
+</head>
+<body>
+<script>
+    function prConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "Ok. Ta có thể chơi cờ vua.";
+        } else {
+            result = "Vậy hãy để lần sau.";
+        }
+        return result;
+    }
+    let cfAnswer = confirm("Chúng ta có thể chơi game không ?");
+    let theAnswer = prConfirm(cfAnswer);
+    alert(theAnswer);
+
+</script>
+</body>
+</html>
