@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhập độ C : '))
+    class Temperature{
+        hienThiKevin(){
+            alert('Kevin là : ' + a + 273.15)
+        }
+        hienThiDoF(){
+            alert('Độ F là : ' + a * 9/5 + 32)
+        }
+    } let nhietdo = new Temperature(a);
+    nhietdo.hienThiDoF()
+    nhietdo.hienThiKevin()
+</script>
+</body>
+</html>

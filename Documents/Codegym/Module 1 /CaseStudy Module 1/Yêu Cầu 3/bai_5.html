@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let coffe1 = 20000;
+    let orange2 = 25000;
+    let carrot3 = 25000 ;
+    let tomato4 = 25000 ;
+    let water5 = 10000 ;
+    let coconut6 = 20000;
+    let choose;
+    let num;
+    do {
+        choose = parseInt(prompt("Menu: Nhập số thứ tự để chọn món : " + "\n" +
+            "(1).Cafe" + "\n" +
+            "(2).Cam vắt" + "\n" +
+            "(3).Nước ép cà rốt " + "\n" +
+            "(4).Nước ép cà chua " + "\n" +
+            "(5).Nước lọc " + "\n" +
+            "(6).Nước dừa " + "\n" +
+            "(7).Thoát menu"));
+        if (choose === 1) {
+            let num = parseInt(prompt("Nhập số lượng cần mua : "));
+            let total = num * coffe1;
+            alert("Tổng cộng số tiền cần thanh toán : " + total + "VND");
+            break;
+        }else if(choose===2){
+            let num = parseInt(prompt("Nhập số lượng cần mua : "));
+            let total = num * orange2;
+            alert("Tổng cộng số tiền cần thanh toán : " + total + "VND");
+            break;
+        }else if(choose===3){
+            let num = parseInt(prompt("Nhập số lượng cần mua : "));
+            let total = num * carrot3;
+            alert("Tổng cộng số tiền cần thanh toán : " + total + "VND");
+            break;
+        }else if(choose===4){
+            let num = parseInt(prompt("Nhập số lượng cần mua : "));
+            let total = num * tomato4;
+            alert("Tổng cộng số tiền cần thanh toán : " + total + "VND");
+            break;
+        }else if(choose===5){
+            let num = parseInt(prompt("Nhập số lượng cần mua : "));
+            let total = num * water5;
+            alert("Tổng cộng số tiền cần thanh toán : " + total + "VND");
+            break;
+        }else if(choose===6){
+            let num = parseInt(prompt("Nhập số lượng cần mua : "));
+            let total = num * coconut6;
+            alert("Tổng cộng số tiền cần thanh toán : " + total + "VND");
+            break;
+        }
+    } while (choose !== 7);
+</script>
+</body>
+</html>

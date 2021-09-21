@@ -11,8 +11,12 @@
     let z=N;
     for (let i = 1; i <= N; i++) {
         for (let j = 1; j <= 2 * N - 1; j++) {
-            if (j >= y && j <= z) {document.write('*');}
-            else {document.write('&nbsp&nbsp');}}
+            if (j >= y && j <= z) {
+                document.write('*');}
+            else {
+                document.write('&nbsp&nbsp');
+            }
+        }
         y--;
         z++;
         document.write('<br>');}

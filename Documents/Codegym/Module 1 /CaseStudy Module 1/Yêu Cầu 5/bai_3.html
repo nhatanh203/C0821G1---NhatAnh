@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let array = [[2, 9, 7, 2, 3, 2],
+    [2, 1, 7, 4, 3, 5]]
+  let maxNum = array[0][0];
+  for (let i = 0 ; i <array.length; i++){
+      for(let j = 0 ; j < array.length; j ++){
+          if (array[i][j] > maxNum ){
+              maxNum = array[i][j];
+          }
+      }
+  }alert('Số lớn nhất trong mảng 2 chiều là : ' + maxNum)
+let minNum = array[0][0]
+for ( let i = 0 ; i < array.length ; i++){
+    for ( let j = 0; j < array.length ; j ++ ){
+        if(array[i][j] < minNum){
+            minNum = array[i][j];
+        }
+    }
+} alert('Số bé nhất trong mảng 2 chiều là : ' + minNum)
+</script>
+</body>
+</html>
