@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>công tắc và bóng đèn</title>
+</head>
+<body>
+<script>
+    class Switch {
+        constructor(status, light) {
+            this.status = status;
+            this.light = light;
+        }
+
+        ThisStatus() {
+            if (this.status) {
+                alert("Công tắc bật")
+            } else {
+                alert("Công tắc tắt")
+            }
+        }
+
+        SwitchOn(value) {
+            this.status = true;
+            value.status = true;
+        }
+
+        SwitchOff(value) {
+            this.status = true;
+            value.status = true;
+        }
+    }
+
+    class Lamp {
+        constructor(condition) {
+            this.condition = condition;
+        }
+
+        ThisLamp() {
+            if (this.condition) {
+                alert("Đèn đang bật")
+            } else {
+                alert("Đèn đang tắt")
+            }
+        }
+
+        TurnOn() {
+            this.condition = true;
+        }
+
+        TurnOff() {
+            this.condition = false;
+        }
+    }
+
+    let lightNing = new Lamp(true);
+    let buttonSwitch = new Switch(false, lightNing);
+    lightNing.TurnOff();
+    buttonSwitch.SwitchOn(lightNing);
+    lightNing.TurnOn();
+    buttonSwitch.SwitchOff(lightNing);
+    lightNing.ThisLamp();
+</script>
+</body>
+</html>
