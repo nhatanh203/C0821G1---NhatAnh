@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap1 = parseInt(prompt('Nhập số m : '))
+    let nhap2 = parseInt(prompt('Nhập số n : '))
+    let num1=[[nhap1],[nhap2]];
+    let sum=0;
+    let sum2=0;
+    for (let i = 0; i < num1.length; i++){
+        if(num1[i]%2===0) {
+            sum += num1[i];
+        }
+    }
+    for (let i = 0; i < num1.length; i++) {
+        if (num1[i] % 2 === 0) {
+            sum2 += num1[i];
+        }
+    }
+    for(let i=0 ; i<num1.length ; i++){
+        var x = sum*sum2;
+    }
+    document.write(x)
+</script>
+</body>
+</html>
