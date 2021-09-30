@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sổ tiết kiệm</title>
+</head>
+<body>
+<button name="button" type="button" onclick="Show" id="demo">Thêm sổ tiết kiệm</button>
+<script>
+    class SavingBook {
+        constructor(Num, Type, Name, Identity, Date, Money) {
+            this.Num = Num;
+            this.Type = Type;
+            this.Name = Name;
+            this.Identity = Identity;
+            this.Date = Date;
+            this.Money = Money;
+        }
+
+        getNum() {
+            return this.Num;
+        }
+
+        setNum(value) {
+            this.Num = value;
+        }
+
+        getType() {
+            return this.Type;
+        }
+
+        setType(value) {
+            this.Type = value;
+        }
+
+        getName() {
+            return this.Name;
+        }
+
+        setName(value) {
+            this.Name = value;
+        }
+
+        getIdentity() {
+            return this.Identity;
+        }
+
+        setIdentity(value) {
+            this.Identity = value;
+        }
+
+        getDate() {
+            return this.Date;
+        }
+
+        setDate(value) {
+            this.Date = value;
+        }
+
+        getMoney() {
+            return this.Money;
+        }
+
+        setMoney(value) {
+            this.Money = value;
+        }
+    }
+
+    let Array = [];
+
+    function Show() {
+        let input = parseInt(prompt(" Nhập mã số : "));
+        let input1 = parseInt(prompt(" Nhập loại sổ : "));
+        let input2 = parseInt(prompt(" Nhập họ và tên : "));
+        let input3 = parseInt(prompt(" Nhập số CMND : "));
+        let input4 = parseInt(prompt(" Nhập ngày mở sổ: "));
+        let input5 = parseInt(prompt(" Nhập số tiền gửi : "));
+    }
+</script>
+</body>
+</html>

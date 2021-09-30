@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh phân số</title>
+</head>
+<body>
+<script>
+    let Numerator1 = parseInt(prompt('Nhập tử số của phân số đầu tiên : '));
+    let Denominator1 = parseInt(prompt('Nhập mẫu số của phân số đầu tiên : '));
+    let Numerator2 = parseInt(prompt('Nhập tử số của phân số thứ 2 : '));
+    let Denominator2 = parseInt(prompt('Nhập mẫu số của phân số thứ 2 : '));
+
+    function Compare() {
+        let QuyDong1 = Numerator1 * Denominator2;
+        let QuyDong2 = Denominator1 * Denominator2;
+        let QuyDong3 = Numerator2 * Denominator1;
+        let QuyDong4 = Denominator2 * Denominator1;
+        let Fraction1 = QuyDong1 / QuyDong2;
+        let Fraction2 = QuyDong3 / QuyDong4;
+        if (Fraction1 === Fraction2) {
+            alert("True");
+        } else {
+            alert("False");
+        }
+    }
+
+    Compare();
+</script>
+</body>
+</html>

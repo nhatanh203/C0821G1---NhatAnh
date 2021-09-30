@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<label>Name: </label><input type="text" id="productName">
+<label>Price: </label><input type="text" id="productPrice">
+<label>Amount: </label><input type="text" id="productAmount">
+<button onclick="addProduct()">Add</button>
+<div id="table"></div>
+
+</body>
+<script>
+    class Product {
+        constructor(name, price, amount) {
+            this.name = name;
+            this.price = price;
+            this.amount = amount;
+        }
+
+
+        getName() {
+            return this.name;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+
+        setPrice(value) {
+            this.price = value;
+        }
+
+        getAmount() {
+            return this.amount;
+        }
+
+        setAmount(value) {
+            this.amount = value;
+        }
+
+    }
+
+    let product1 = new Product("Iphone 11", 1200, 10);
+    let product2 = new Product("Iphone 12", 1800, 20);
+    let product3 = new Product("Iphone 13", 2200, 30);
+
+    let listProduct = [product1, product2, product3];
+
+
+    function addProduct() {
+        let productName = document.getElementById('productName').value;
+        let productPrice = document.getElementById('productPrice').value;
+        let productAmount = document.getElementById('productAmount').value;
+        if (productName !== "" || productPrice !== "" || productAmount !== "") {
+            let product = new Product(productName, productPrice, productAmount)
+            listProduct.push(product);
+            document.getElementById('productName').value = "";
+            document.getElementById('productPrice').value = "";
+            document.getElementById('productAmount').value = "";
+            displayProduct();
+        }
+    }
+
+    function editProduct(index) {
+        listProduct[index] = prompt("Nhập tên sản phẩm chỉnh sửa: ");
+        displayProduct();
+    }
+
+    function deleteProduct(index) {
+        let check = confirm("Bạn có muốn xóa sản phẩm " + listProduct[index] + " Không?");
+        if (check) {
+            listProduct.splice(index, 1);
+            displayProduct();
+        }
+    }
+
+    function displayProduct() {
+        let table = "<table cellspacing='10'  >" +
+            "<tr><th> Name</th>" +
+            "<th> Price</th>" +
+            "<th> Amount</th></tr>";
+
+        for (let i = 0; i < listProduct.length; i++) {
+            table += "<tr>" +
+                "<td>" + listProduct[i].getName() + "</td>" +
+                "<td>" + listProduct[i].getPrice() + "</td>" +
+                "<td>" + listProduct[i].getAmount() + "</td>" +
+                "<td><button onclick='editProduct(" + i + ")'>Edit</button>" + "</td>" +
+                "<td><button onclick='deleteProduct(" + i + ")'>Delete</button>" + "</td>" +
+                "</tr>";
+        }
+
+        table += "</table>";
+        document.getElementById('table').innerHTML = table;
+    }
+
+    displayProduct();
+
+
+</script>
+</html>
